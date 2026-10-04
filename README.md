@@ -10,7 +10,7 @@
   <a href="https://t.me/ai_student_life"><img src="https://img.shields.io/badge/Telegram-%40ai_student_life-2AABEE?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram-канал"></a>
   <a href="https://github.com/Shuguy99"><img src="https://img.shields.io/badge/GitHub-Shuguy99-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"></a>
   <img src="https://img.shields.io/badge/open%20to%20work-%2310B981?style=for-the-badge" alt="Открыт к предложениям">
-  <img src="https://img.shields.io/badge/Moscow-Russia%20%F0%9F%87%B5%F0%9F%87%B7-red?style=for-the-badge" alt="Москва">
+  <img src="https://img.shields.io/badge/Krasnoyarsk-Russia%20%F0%9F%87%B5%F0%9F%87%B7-red?style=for-the-badge" alt="Красноярск, Россия">
 </p>
 
 ---
@@ -113,22 +113,31 @@ User-Agent, задержки, ретраи с backoff, обход пагинац
 </td>
 <td width="50%" valign="top">
 
-<!-- TODO: заменить блок на свой проект -->
-### 🛠️ <b>место для следующего проекта</b>
+<!-- TODO: заменить на реальный репозиторий, когда будет готов -->
+### 🛠️ <b>Sieve</b> — ETL-конвейер на Rust
 
-Сюда подойдёт сервис на Rust или утилита на C++: короткая задача, стек, одна строка
-«почему это интересно» и ссылка на код. Три строки — уже лучше, чем пустая секция.
+Стриминговый загрузчик: читает YAML-конфиг, тянет батчи из Postgres и HTTP-API, валидирует,
+дедуплицирует и пишет в ClickHouse. Exactly-once обеспечивают идемпотентные батчи
+и чекпоинты, а не надежда на «ну вроде записалось».
+
+`rust` `tokio` `sqlx` `clickhouse` `criterion`
+
+Зачем: миллионы строк в сутки и требование перезапускаться без дублей.
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-<!-- TODO: заменить блок на свой проект -->
-### 📐 <b>место для эксперимента</b>
+<!-- TODO: заменить на реальный репозиторий, когда будет готов -->
+### 📐 <b>Axon</b> — нейросеть на C++ без фреймворков
 
-Бенчмарк, профилировщик, клиент к API — что угодно, где есть график «до / после».
-Хорошие репозитории начинаются с одного графика.
+Прямой проход матриц руками: SSE/AVX2, кэш, который влезает в L1, и честный бенчмарк
+против `numpy`. Ни TensorFlow, ни Python в рантайме — только `std::` и пара страниц кода.
+
+`c++` `simd` `perf` `cmake`
+
+Ради чего: график «до / после» и понимание, где именно проигрывают SIMD-инструкции.
 
 </td>
 <td width="50%" valign="top">
